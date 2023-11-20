@@ -1,0 +1,58 @@
+<div class="hamburger-menu">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+.crossed .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.crossed .line:nth-child(2) {
+  opacity: 0;
+}
+
+.crossed .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const menu = document.querySelector('.hamburger-menu');
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('crossed');
+});
+
+
+
+to make image background use this  style={{backgroundImage: `url(${img})`}}
